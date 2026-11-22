@@ -1,0 +1,15 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+
+{% comment %}
+  Надстройка над стандартным шаблоном админки (Django разрешает расширять шаблон
+  с тем же именем): подключает цвета дизайн-системы и favicon.
+{% endcomment %}
+
+{% block extrastyle %}{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/admin-theme.css' %}">
+{% endblock %}
+
+{% block extrahead %}{{ block.super }}
+<link rel="icon" type="image/svg+xml" href="{% static 'img/logo-mark.svg' %}">
+{% endblock %}

@@ -1,0 +1,14 @@
+/* Цвета админки по дизайн-системе (docs/design-system.md). Только переменные Django, без переделки вёрстки. */
+:root {
+  --primary: #2B5FD9;
+  --secondary: #1E47A8;
+  --accent: #F59E0B;
+  --link-fg: #1E47A8;
+  --link-hover-color: #2B5FD9;
+  --button-bg: #2B5FD9;
+  --button-hover-bg: #1E47A8;
+  --default-button-bg: #1E47A8;
+  --default-button-hover-bg: #153680;
+}
+
+#site-name a { letter-spacing: 0.01em; }
