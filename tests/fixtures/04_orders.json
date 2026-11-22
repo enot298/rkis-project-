@@ -1,0 +1,327 @@
+[
+  {
+    "model": "orders.order",
+    "pk": 1,
+    "fields": {
+      "client": 1,
+      "manager": 2,
+      "date": "2026-10-25",
+      "status": "new",
+      "total_amount": "5200.00",
+      "notes": "Обычный заказ",
+      "cancel_reason": "",
+      "needs_approval": false,
+      "archived": false,
+      "version": 0,
+      "created_at": "2026-10-02T09:00:00Z",
+      "updated_at": "2026-10-03T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 2,
+    "fields": {
+      "client": 2,
+      "manager": 2,
+      "date": "2026-10-20",
+      "status": "in_progress",
+      "total_amount": "150000.00",
+      "notes": "Сумма больше 100 000 (BR-003)",
+      "cancel_reason": "",
+      "needs_approval": true,
+      "archived": false,
+      "version": 1,
+      "created_at": "2026-10-03T09:00:00Z",
+      "updated_at": "2026-10-04T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 3,
+    "fields": {
+      "client": 1,
+      "manager": 2,
+      "date": "2026-10-01",
+      "status": "done",
+      "total_amount": "100.00",
+      "notes": "Выполнен: граница для BR-002",
+      "cancel_reason": "",
+      "needs_approval": false,
+      "archived": false,
+      "version": 2,
+      "created_at": "2026-10-04T09:00:00Z",
+      "updated_at": "2026-10-05T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 4,
+    "fields": {
+      "client": 1,
+      "manager": 2,
+      "date": "2026-10-01",
+      "status": "cancelled",
+      "total_amount": "0.00",
+      "notes": "",
+      "cancel_reason": "Клиент отказался",
+      "needs_approval": false,
+      "archived": false,
+      "version": 2,
+      "created_at": "2026-10-05T09:00:00Z",
+      "updated_at": "2026-10-06T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 5,
+    "fields": {
+      "client": 4,
+      "manager": 6,
+      "date": "2026-10-25",
+      "status": "new",
+      "total_amount": "99999999.99",
+      "notes": "Максимальная сумма поля",
+      "cancel_reason": "",
+      "needs_approval": true,
+      "archived": false,
+      "version": 0,
+      "created_at": "2026-10-06T09:00:00Z",
+      "updated_at": "2026-10-07T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 6,
+    "fields": {
+      "client": 1,
+      "manager": 2,
+      "date": "2020-01-01",
+      "status": "new",
+      "total_amount": "100.00",
+      "notes": "Дата в прошлом: через админку такой заказ не создать (BR-001)",
+      "cancel_reason": "",
+      "needs_approval": false,
+      "archived": false,
+      "version": 0,
+      "created_at": "2026-10-07T09:00:00Z",
+      "updated_at": "2026-10-08T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 7,
+    "fields": {
+      "client": 5,
+      "manager": null,
+      "date": "2026-10-22",
+      "status": "done",
+      "total_amount": "501.00",
+      "notes": "<b>\"Заметка\"</b> со спецсимволами 🙂 & 'кавычками'",
+      "cancel_reason": "",
+      "needs_approval": false,
+      "archived": true,
+      "version": 3,
+      "created_at": "2026-10-08T09:00:00Z",
+      "updated_at": "2026-10-09T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 8,
+    "fields": {
+      "client": 6,
+      "manager": 7,
+      "date": "2026-10-26",
+      "status": "new",
+      "total_amount": "6000.00",
+      "notes": "Скидка 40% (BR-007)",
+      "cancel_reason": "",
+      "needs_approval": true,
+      "archived": false,
+      "version": 0,
+      "created_at": "2026-10-09T09:00:00Z",
+      "updated_at": "2026-10-10T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 9,
+    "fields": {
+      "client": 2,
+      "manager": 2,
+      "date": "2026-10-27",
+      "status": "new",
+      "total_amount": "0.00",
+      "notes": "",
+      "cancel_reason": "",
+      "needs_approval": false,
+      "archived": false,
+      "version": 5,
+      "created_at": "2026-10-10T09:00:00Z",
+      "updated_at": "2026-10-11T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.order",
+    "pk": 10,
+    "fields": {
+      "client": 7,
+      "manager": 6,
+      "date": "2026-10-28",
+      "status": "new",
+      "total_amount": "100000.00",
+      "notes": "Ровно 100 000: граница BR-003 (условие «больше»)",
+      "cancel_reason": "",
+      "needs_approval": false,
+      "archived": false,
+      "version": 0,
+      "created_at": "2026-10-11T09:00:00Z",
+      "updated_at": "2026-10-12T09:00:00Z"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "quantity": 2,
+      "price_at_moment": "100.00"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 8,
+      "quantity": 5,
+      "price_at_moment": "1000.00"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "product": 4,
+      "quantity": 3000,
+      "price_at_moment": "50.00"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 3,
+      "product": 1,
+      "quantity": 1,
+      "price_at_moment": "100.00"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 5,
+    "fields": {
+      "order": 5,
+      "product": 3,
+      "quantity": 1,
+      "price_at_moment": "99999999.99"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 6,
+    "fields": {
+      "order": 6,
+      "product": 1,
+      "quantity": 1,
+      "price_at_moment": "100.00"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 7,
+    "fields": {
+      "order": 7,
+      "product": 6,
+      "quantity": 2,
+      "price_at_moment": "250.50"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 8,
+    "fields": {
+      "order": 8,
+      "product": 8,
+      "quantity": 10,
+      "price_at_moment": "600.00"
+    }
+  },
+  {
+    "model": "orders.orderitem",
+    "pk": 9,
+    "fields": {
+      "order": 10,
+      "product": 1,
+      "quantity": 1000,
+      "price_at_moment": "100.00"
+    }
+  },
+  {
+    "model": "orders.payment",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "amount": "5200.00",
+      "method": "card",
+      "status": "paid",
+      "paid_at": "2026-10-24T12:00:00Z"
+    }
+  },
+  {
+    "model": "orders.payment",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "amount": "150000.00",
+      "method": "transfer",
+      "status": "pending",
+      "paid_at": null
+    }
+  },
+  {
+    "model": "orders.payment",
+    "pk": 3,
+    "fields": {
+      "order": 3,
+      "amount": "100.00",
+      "method": "cash",
+      "status": "paid",
+      "paid_at": "2026-10-01T15:00:00Z"
+    }
+  },
+  {
+    "model": "orders.payment",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "amount": "0.00",
+      "method": "cash",
+      "status": "failed",
+      "paid_at": null
+    }
+  },
+  {
+    "model": "orders.payment",
+    "pk": 5,
+    "fields": {
+      "order": 8,
+      "amount": "6000.00",
+      "method": "card",
+      "status": "pending",
+      "paid_at": null
+    }
+  }
+]

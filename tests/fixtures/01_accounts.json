@@ -1,0 +1,172 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fixtureSalt01$NAg7HyeXZgDulvd3Aujm3QT/87/M/EqU8Gtr/2dbcTo=",
+      "last_login": "2026-10-24T08:00:00Z",
+      "is_superuser": true,
+      "username": "admin",
+      "role": "admin",
+      "is_active": true,
+      "created_at": "2026-10-01T09:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fixtureSalt02$7PcDzwR+KvpuacmZjIl1UaSsLT/k1GbZT5+0q6N20cs=",
+      "last_login": "2026-10-24T08:05:00Z",
+      "is_superuser": false,
+      "username": "manager1",
+      "role": "manager",
+      "is_active": true,
+      "created_at": "2026-10-02T09:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fixtureSalt03$i+NXdiWqh6tkNkwmeomPvxpUvO4KfSolY/UR+ORaxO4=",
+      "last_login": "2026-10-23T17:30:00Z",
+      "is_superuser": false,
+      "username": "storekeeper1",
+      "role": "storekeeper",
+      "is_active": true,
+      "created_at": "2026-10-02T09:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fixtureSalt04$0O1BcwVfAci71NYWCbwW9EY1Md55/fVaSv1MivFmeDc=",
+      "last_login": "2026-10-24T07:50:00Z",
+      "is_superuser": false,
+      "username": "accountant1",
+      "role": "accountant",
+      "is_active": true,
+      "created_at": "2026-10-03T09:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fixtureSalt05$RHPpzSOiTwShhvBI+kOm+O27MVf564fGBHImORt0NtU=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "inactive",
+      "role": "manager",
+      "is_active": false,
+      "created_at": "2026-10-03T09:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fixtureSalt06$rm/wrgBdQsl5tO2MMw9yQ8/wxuEHy5Ww+PMdWceDmm0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "manager2",
+      "role": "manager",
+      "is_active": true,
+      "created_at": "2026-10-04T09:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 7,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fixtureSalt07$gBvJoPfu2Nk5HFk8M6YwyY0Xo492yQIWRfIX2n2JsNw=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "very_long_login_for_boundary_test_exactly_50_abcde",
+      "role": "manager",
+      "is_active": true,
+      "created_at": "2026-10-04T09:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$fixtureSalt08$18PTLKEYwkRCRQF73Qm1wTL/cZDzjizIn+jWS4Nqd2U=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "o.connor+test@dept-1",
+      "role": "storekeeper",
+      "is_active": true,
+      "created_at": "2026-10-05T09:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "token": "token_active_manager1",
+      "created_at": "2026-10-24T08:05:00Z",
+      "expires_at": "2026-10-25T08:05:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "token": "token_expired_manager1",
+      "created_at": "2026-10-20T09:00:00Z",
+      "expires_at": "2026-10-21T09:00:00Z",
+      "is_active": false
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "token": "token_admin",
+      "created_at": "2026-10-24T08:00:00Z",
+      "expires_at": "2026-10-25T08:00:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 4,
+    "fields": {
+      "user": 3,
+      "token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "created_at": "2026-10-23T10:00:00Z",
+      "expires_at": "2026-10-23T18:00:00Z",
+      "is_active": false
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 5,
+    "fields": {
+      "user": 4,
+      "token": "token_active_accountant1",
+      "created_at": "2026-10-24T07:50:00Z",
+      "expires_at": "2026-10-24T19:50:00Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 6,
+    "fields": {
+      "user": 5,
+      "token": "token_inactive_user",
+      "created_at": "2026-10-10T09:00:00Z",
+      "expires_at": "2026-10-11T09:00:00Z",
+      "is_active": false
+    }
+  }
+]
