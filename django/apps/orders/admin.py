@@ -27,9 +27,9 @@ class PaymentInline(admin.StackedInline):
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
     list_display = (
-        "id", "client", "date", "status", "total_amount", "needs_approval", "archived", "manager", "positions",
+        "id", "client_short", "date", "status", "total_amount", "needs_approval", "archived", "manager", "positions",
     )
-    list_display_links = ("id", "client")
+    list_display_links = ("id", "client_short")
     list_filter = ("status", "needs_approval", "archived", "date", "manager")
     search_fields = ("client__name", "client__phone", "notes", "manager__username")
     date_hierarchy = "date"
@@ -49,6 +49,12 @@ class OrderAdmin(admin.ModelAdmin):
 
     def get_queryset(self, request):
         return super().get_queryset(request).annotate(_positions=Count("items"))
+
+    @admin.display(description="Клиент", ordering="client__name")
+    def client_short(self, obj):
+        # длинные названия обрезаем, чтобы таблица не уезжала за экран
+        name = obj.client.name
+        return name if len(name) <= 50 else name[:50] + "…"
 
     @admin.display(description="Позиций", ordering="_positions")
     def positions(self, obj):
